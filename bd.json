@@ -14,10 +14,11 @@
     "nome": "Guido",
     "email": "guido@email.com",
     "cpf": "12345678901",
-    "profissao": "Professor BackEnd",
+    "profissao": "BackEnd",
     "endereco": {
       "cep": "12345-678",
       "rua": "Rua A",
+      "complemento": "Casa 05",
       "bairro": "Centro",
       "cidade": "Salvador"
     }
