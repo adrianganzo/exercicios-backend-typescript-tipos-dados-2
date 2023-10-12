@@ -1,0 +1,25 @@
+[
+  {
+    "nome": "Adrian",
+    "email": "adrian@email.com",
+    "cpf": "12345678900",
+    "endereco": {
+      "cep": "88080250",
+      "rua": "Abel Capela",
+      "bairro": "Coqueiros",
+      "cidade": "Florianópolis"
+    }
+  },
+  {
+    "nome": "Guido",
+    "email": "guido@email.com",
+    "cpf": "12345678901",
+    "profissao": "Professor BackEnd",
+    "endereco": {
+      "cep": "12345-678",
+      "rua": "Rua A",
+      "bairro": "Centro",
+      "cidade": "Salvador"
+    }
+  }
+]
