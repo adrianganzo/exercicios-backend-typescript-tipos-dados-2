@@ -31,8 +31,18 @@ const cadastrarUsuario = (dados: Usuario): Usuario => {
   return dados;
 }
 
-const listarUsuarios = (): Usuario[] => {
-  return lerArquivo() as Usuario[];
+const listarUsuarios = (filtro?: string): Usuario[] => {
+  const bd = lerArquivo() as Usuario[];
+
+  const usuarios = bd.filter(usuario => {
+    if (filtro) {
+      return usuario.profissao === filtro;
+    }
+
+    return usuario;
+  });
+
+  return usuarios;
 }
 
 const detalharUsuario = (cpf: string): Usuario => {
@@ -84,8 +94,18 @@ const excluirUsuario = (cpf: string): Usuario => {
   return usuario;
 }
 
-console.log(excluirUsuario("12345678901"), "\n");
+// cadastrarUsuario({
+//   nome: "Ruli",
+//   email: "ruli@email.com",
+//   cpf: "12345678902",
+//   profissao: "frontend",
+//   endereco: {
+//     cep: "12345-678",
+//     rua: "Rua A",
+//     bairro: "Centro",
+//     cidade: "Salvador"
+//   }
+// });
 
-
-const bd = lerArquivo();
+const bd = listarUsuarios("backend");
 console.log(bd);

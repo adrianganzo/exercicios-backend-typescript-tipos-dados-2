@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "nome": "Adrian",
+    "email": "adrian@email.com",
+    "cpf": "12345678900",
+    "profissao": "fullstack",
+    "endereco": {
+      "cep": "12345-678",
+      "rua": "Rua A",
+      "bairro": "Centro",
+      "cidade": "Florianópolis"
+    }
+  },
+  {
+    "nome": "Guido",
+    "email": "guido@email.com",
+    "cpf": "12345678901",
+    "profissao": "backend",
+    "endereco": {
+      "cep": "12345-678",
+      "rua": "Rua A",
+      "bairro": "Centro",
+      "cidade": "Salvador"
+    }
+  },
+  {
+    "nome": "Ruli",
+    "email": "ruli@email.com",
+    "cpf": "12345678902",
+    "profissao": "frontend",
+    "endereco": {
+      "cep": "12345-678",
+      "rua": "Rua A",
+      "bairro": "Centro",
+      "cidade": "Salvador"
+    }
+  }
+]
