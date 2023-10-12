@@ -65,46 +65,27 @@ const atualizarUsuario = (cpf: string, dados: Usuario): Usuario => {
   return dados;
 }
 
-// const adrian = cadastrarUsuario({
-//   nome: "Adrian",
-//   email: "adrian@email.com",
-//   cpf: "12345678900",
-//   endereco: {
-//     cep: "88080250",
-//     rua: "Abel Capela",
-//     bairro: "Coqueiros",
-//     cidade: "Florianópolis"
-//   }
-// });
+const excluirUsuario = (cpf: string): Usuario => {
+  const bd = lerArquivo() as Usuario[];
+  const usuario = bd.find(usuario => {
+    return usuario.cpf === cpf;
+  });
 
-// const guido = cadastrarUsuario({
-//   nome: "Guido",
-//   email: "guido@email.com",
-//   cpf: "12345678901",
-//   profissao: "Professor BackEnd",
-//   endereco: {
-//     cep: "12345-678",
-//     rua: "Rua A",
-//     bairro: "Centro",
-//     cidade: "Salvador"
-//   }
-// });
-
-// const guido = detalharUsuario("1234567890");
-
-atualizarUsuario("12345678901", {
-  nome: "Guido",
-  email: "guido@email.com",
-  cpf: "12345678901",
-  profissao: "BackEnd",
-  endereco: {
-    cep: "12345-678",
-    rua: "Rua A",
-    complemento: "Casa 05",
-    bairro: "Centro",
-    cidade: "Salvador"
+  if (!usuario) {
+    throw new Error("Usuário não encontrado");
   }
-});
+
+  const exclusao = bd.filter(usuario => {
+    return usuario.cpf !== cpf
+  });
+
+  escreverArquivo(exclusao);
+
+  return usuario;
+}
+
+console.log(excluirUsuario("12345678901"), "\n");
+
 
 const bd = lerArquivo();
 console.log(bd);
